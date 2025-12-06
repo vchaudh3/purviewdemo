@@ -169,7 +169,7 @@ function putSource([string]$access_token, [hashtable]$payload) {
 }
 
 # Add UAMI to Root Collection Admin
-Add-AzPurviewAccountRootCollectionAdmin -AccountName $accountName -ResourceGroupName $purviewResourceGroupName -ObjectId $objectId
+Add-AzPurviewAccountRootCollectionAdmin -AccountName $accountName -ResourceGroupName $resourceGroupName -ObjectId $objectId
 
 # Get Access Token
 $response = Invoke-WebRequest -Uri 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https%3A%2F%2Fpurview.azure.net%2F' -Headers @{Metadata="true"}
