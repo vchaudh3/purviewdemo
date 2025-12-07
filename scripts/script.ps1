@@ -12,7 +12,8 @@ param(
     [string]$sqlServerName,
     [string]$storageAccountName,
     [string]$subscriptionId,
-    [string]$vaultUri
+    [string]$vaultUri,
+    [string]$purviewResourceGroupName
 )
 
 Install-Module Az.Purview -Force
